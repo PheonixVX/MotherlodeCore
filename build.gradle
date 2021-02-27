@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '0.5-SNAPSHOT' apply false
+    id 'fabric-loom' version '0.6-SNAPSHOT' apply false
 }
 apply from: 'dependencies.gradle'
 
@@ -29,6 +29,8 @@ allprojects {
         }
 
         maven { url 'https://jitpack.io' }
+
+        maven { url 'https://repo.repsy.io/mvn/xxx_inaksis_xxx/inaksis' }
     }
     dependencies {
         dependencies.ext.useAsApiOptionally = { dep ->
@@ -77,6 +79,9 @@ allprojects {
         minecraft "com.mojang:minecraft:${project.minecraft_version}"
         mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
         modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+
+        // INclude GeckoLib for each module, uses experimental 1.17 snapshot fork.
+        modImplementation 'software.bernie.geckolib:geckolib-fabric-1.17:3.0.20:dev'
 
         tap(rootProject.ext.setDefaultApis)
     }

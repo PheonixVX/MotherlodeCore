@@ -19,6 +19,9 @@
     "motherlode:init": [
       "motherlode.copperdungeon.MotherlodeModule"
     ],
+    "main": [
+      "motherlode.copperdungeon.MotherlodeCopperDungeon"
+    ],
     "client": [
       "motherlode.copperdungeon.MotherlodeCopperDungeonClient"
     ]

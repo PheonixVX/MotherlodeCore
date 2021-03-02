@@ -27,6 +27,7 @@ public class MotherlodeCopperDungeon implements ModInitializer {
 			STATO_BOT_ENTITY_TYPE,
 			StatoBotEntity.createMobAttributes()
 				.add(EntityAttributes.GENERIC_MAX_HEALTH, 20)
+				.add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 5)
 		);
 	}
 }
